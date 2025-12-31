@@ -3,16 +3,25 @@ Programming Assignment 5
 Working with Graphs
 
 Description:
-You are to develop a C++ class called Graph that represents a weighted, directed graph.  You may represent your graph using either of the two standard graph representations discussed in class.  Your class must clearly and correctly use either an adjacency matrix or an adjacency list representation.  It is your choice which of the two representations you use. Your class must provide the following public methods:
+You are to develop a C++ class called Graph that represents a weighted, directed graph.  
+You may represent your graph using either of the two standard graph representations discussed in class.  
+Your class must clearly and correctly use either an adjacency matrix or an adjacency list representation.  
+It is your choice which of the two representations you use. Your class must provide the following public methods:
 	•	readGraph will accept the name of a file as a parameter and read in a new graph from that file (replacing whatever the object currently holds, if anything). It will return a bool which will be true unless the input file could not be opened. It should not print anything to the console, even if an error occurs opening the file, just return the appropriate bool value.
 	•	printGraph will print your graph to standard output (cout) in the same format as the graphs you are reading. This must read the data from your class member variables (e.g., adjacency matrix/list, etc.), and is primarilty meant to be used as a debugging tool for you. Do not just store the file contents in a string and regurgitate them to the console.
 	•	computeTopologicalSort will print to standard output a topological sort of the graph or an error message indicating that a topological sort of the graph is not possible. You will use a queue for the algorithm. See below for the exact output format.
 	•	computeShortestPaths will accept a node name as a parameter and print to standard output the actual path and the cost to each other vertex that can be reached (one path and cost per line). For any nodes that cannot be reached, it will print a message indicating that. Again, see below for the exact output format. You must use Dijkstra’s algorithm implemented using a priority queue as discussed in class (NOTE: the book does not use this algorithm; do not use the book’s code). For a refresher on the algorithm, please refer to the Dr Califf’s Djikstra’s shortest paths videos as necessary.
-	•	computeMinimumSpanningTree will print to standard output a list of the edges in the minimum spanning tree for the graph, one per line, with the weight of each edge, followed by the total weight of the minimum spanning tree.  See below for the exact output format. Your method will have the graph being connected as a precondition (and your comments must make that clear). You will compute the minimum spanning tree with Kruskal’s algorithm, using your DisjointSet class from program 4. In order to guarantee that your results match the provided output, make sure that your sort of the edges orders by edge weight (obviously), then index of the from node, then index of the to node.  
+	•	computeMinimumSpanningTree will print to standard output a list of the edges in the minimum spanning tree for the graph, one per line, with the weight of each edge, followed by the total weight of the minimum spanning tree. 
+	See below for the exact output format.
+	Your method will have the graph being connected as a precondition (and your comments must make that clear). 
+	You will compute the minimum spanning tree with Kruskal’s algorithm, using your DisjointSet class from program 4. 
+	In order to guarantee that your results match the provided output, make sure that your sort of the edges orders by edge weight (obviously), 
+	then index of the from node, then index of the to node.  
 If you are allocating memory dynamically, your class MUST handle it correctly. 
 You are, however, encouraged to make use of relevant STL classes such as vector, list, stack, queue, priority_queue, etc. There is a sample program for making a vector of vectors provided. Making a vector of lists is very similar (but a little easier)).
 
-Note that this must be an efficient class, so the graph representation and all of the algorithms must treat the nodes as integer indices. You will immediately translate node names into the appropriate index when reading data from the user or the file, and translate back from index to node name only when printing.
+Note that this must be an efficient class, so the graph representation and all of the algorithms must treat the nodes as integer indices.
+You will immediately translate node names into the appropriate index when reading data from the user or the file, and translate back from index to node name only when printing.
 
 You are being provided with a program that will use your Graph class (a single object of it) to allow the user to perform the various functions required. The program makes use of a TextMenu class that you will not submit. You will need to modify the graphRunner.cpp file to add your calls to the Graph class, but do not alter the basic functionality. Your program will be automatically evaluated for correctness (as usual), so it is important that your output match the provided information and the correct output format. Spacing discrepancies count as differences in the program output. You are strongly recommended to use the test data provided along with the diff command to confirm the correctness of your output.
 
