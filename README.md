@@ -6,7 +6,8 @@ Description:
 You are to develop a C++ class called Graph that represents a weighted, directed graph.  
 You may represent your graph using either of the two standard graph representations discussed in class.  
 Your class must clearly and correctly use either an adjacency matrix or an adjacency list representation.  
-It is your choice which of the two representations you use. Your class must provide the following public methods:
+It is your choice which of the two representations you use. 
+Your class must provide the following public methods:
 	•	readGraph will accept the name of a file as a parameter and read in a new graph from that file (replacing whatever the object currently holds, if anything). It will return a bool which will be true unless the input file could not be opened. It should not print anything to the console, even if an error occurs opening the file, just return the appropriate bool value.
 	•	printGraph will print your graph to standard output (cout) in the same format as the graphs you are reading. This must read the data from your class member variables (e.g., adjacency matrix/list, etc.), and is primarilty meant to be used as a debugging tool for you. Do not just store the file contents in a string and regurgitate them to the console.
 	•	computeTopologicalSort will print to standard output a topological sort of the graph or an error message indicating that a topological sort of the graph is not possible. You will use a queue for the algorithm. See below for the exact output format.

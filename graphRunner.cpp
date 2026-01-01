@@ -1,4 +1,17 @@
-// graphRunner.cpp
+/*
+  Name: Scott Schmidt
+  Course: IT 279 @ Illinois State University
+  Program: 5 – Graph Algorithms
+  
+Description:
+  Implements graph algorithms including:
+  - Topological Sort
+  - Shortest Paths
+  - Minimum Spanning Tree
+
+./graph   runs the terminal
+*/
+
 #include <iostream>
 #include "Graph.h"
 #include "TextMenu.h"
