@@ -15,8 +15,12 @@ int main() {
 
         switch (choice) {
             case 1:
-                g.readGraph();
+            {
+                string filename;
+                cin >> filename;
+                (void)g.readGraph(filename);
                 break;
+            }
             case 2:
                 g.printGraph();
                 break;
@@ -24,8 +28,12 @@ int main() {
                 g.computeTopologicalSort();
                 break;
             case 4:
-                g.computeShortestPaths();
+            {
+                string startNodeName;
+                cin >> startNodeName;
+                g.computeShortestPaths(startNodeName);
                 break;
+            }
             case 5:
                 g.computeMinimumSpanningTree();
                 break;
