@@ -30,8 +30,9 @@ Graph::Graph() {}
  *  - Returns false if the file could not be opened.
  *  - Does NOT print anything to the console under any circumstances.
  */
-void Graph::readGraph() {
-    std::cout << "readGraph()\n";
+void Graph::readGraph(const string& filename)
+{
+    cout << "readGraph(" << filename << ")\n";
 }
 
 /*
@@ -51,7 +52,23 @@ print to standard output a topological sort of the graph or an error message ind
 You will use a queue for the algorithm. See below for the exact output format.
 */
 void Graph::computeTopologicalSort() {
-    std::cout << "topologicalSort()\n";
+    // TODO: compute indegree of each vertex
+    void Graph::computeTopologicalSort() {
+    vector<int> indegree(numVertices, 0);
+    queue<int> q; //declare the q
+    int processed = 0;
+    
+    // for every edge (connection between nodes) increase indegree by one:
+    for (int u = 0; u < numVertices; u++) {
+        for (int v : adjList[u]) {
+            indegree[v]++;
+        }
+    }
+    // TODO: push all indegree-0 vertices into a queue
+    
+    // TODO: process queue (Kahn’s algorithm)
+    // TODO: detect cycle
+    // TODO: print topological ordering OR error
 }
 
 /*
